@@ -1,0 +1,533 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css" type="text/css">
+        <!-- <script src="{% static 'js/bootstrap/bootstrap.js' %}"></script> -->
+        <script src="{% static 'js/bootstrap/bootstrap.bundle.js' %}"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    </head>
+<body>
+    <!-- First nav  -->
+  <nav class="navbar navbar-expand-lg grad bg-light">
+    <div class="container-fluid First">
+      <div class="container first">
+        <div class="row one">
+          <div class="col text-muted p-0"><a class="navbar-brand logo fw-bold" href="#">ATLAS</a></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col text-muted p-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item dropdown border me-2 pe-3 ">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    STV
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown border ">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Chad
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  </nav>
+  <!--  -->
+
+
+
+    <div class="col-12">
+        <div class="row mx-5">
+            <div class="container-fluid mb-5 mt-3">
+                <h4>VALIDATE RECONCILIATION</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row mx-5">
+            <div class="container-fluid  bg-white p-5">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-12">
+                            <div class="row">
+                                <div class="col-md-2 col-lg-2 col-12">
+                                    <label for="">PSP Name:</label>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-12">
+                                    <h6>Emerchant GBP test</h6>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-md-2 col-lg-2 col-12">
+                                    <label for="">PSP Email:</label>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-12">
+                                    <h6>None</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 col-12">
+                                    <label for="">ATLAS Account Name:</label>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-12">
+                                    <h6>Emerchant GBP test</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="me-md-3 me-lg-3">
+                                <div class="row  mb-5">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <th scope="col" colspan="3" id="tableheading">PSP BALANCE</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" id="tablesubheadning">OPENING BALANCE</th>
+                                                <th scope="col" id="tablesubheadning">CLAOSING BALANCE</th>
+                                                <th scope="col" id="tablesubheadning">BALANCE DIFFERENCE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">0</th>
+                                                <td>123</td>
+                                                <td>123</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row  mb-5">
+                                    <table class="table table-bordered table-striped w-100" id="myTable1">
+                                        <thead>
+                                            <th scope="col" colspan="4" id="tableheading">PSP TRANSACTIONS</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" id="tablesubheadning">REFERENCE #</th>
+                                                <th scope="col" id="tablesubheadning">DEBIT</th>
+                                                <th scope="col" id="tablesubheadning">CREDIT</th>
+                                                <th scope="col" id="tablesubheadning">COMMENT</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><input type="checkbox"></th>
+                                                <td>123</td>
+                                                <td>123</td>
+                                                <td>123</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><input type="checkbox"></th>
+                                                <td>123</td>
+                                                <td>123</td>
+                                                <td>123</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><input type="checkbox"></th>
+                                                <td>123</td>
+                                                <td>123</td>
+                                                <td>123</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><input type="checkbox"></th>
+                                                <td>123</td>
+                                                <td>123</td>
+                                                <td>123</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><input type="checkbox"></th>
+                                                <td>123</td>
+                                                <td>123</td>
+                                                <td>123</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><input type="checkbox"></th>
+                                                <td>123</td>
+                                                <td>123</td>
+                                                <td>123</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row  mb-5">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" colspan="4" class="third-table"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-end">
+                                            <tr>
+                                                <th scope="row" colspan="3">Subtotal</th>
+                                                <th>123</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="3">Account Transactions Accounted For</th>
+                                                <th>123</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="3">Closing Balance</th>
+                                                <th>123</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="row  mb-5">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th scope="col" colspan="3" id="tableheading">ATLAS BALANCE</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" id="tablesubheadning">OPENING BALANCE</th>
+                                            <th scope="col" id="tablesubheadning">CLAOSING BALANCE</th>
+                                            <th scope="col" id="tablesubheadning">BALANCE DIFFERENCE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">0</th>
+                                            <td>123</td>
+                                            <td>123</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row  mb-5">
+                                <table class="table table-bordered table-striped w-100" id="myTable2">
+                                    <thead>
+                                        <th scope="col" colspan="4" id="tableheading">ATLAS TRANSACTIONS</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" id="tablesubheadning">REFERENCE #</th>
+                                            <th scope="col" id="tablesubheadning">DEBIT</th>
+                                            <th scope="col" id="tablesubheadning">CREDIT</th>
+                                            <th scope="col" id="tablesubheadning">COMMENT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><input type="checkbox"></th>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        123
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="float-end">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><input type="checkbox"></th>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        123
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="float-end">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><input type="checkbox"></th>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        123
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="float-end">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><input type="checkbox"></th>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        123
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="float-end">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><input type="checkbox"></th>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        123
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="float-end">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><input type="checkbox"></th>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        123
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="float-end">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row  mb-5">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="4" class="third-table"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-end">
+                                        <tr>
+                                            <th scope="row" colspan="3">Subtotal</th>
+                                            <th>123</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="3">Account Transactions Accounted For</th>
+                                            <th>123</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="3">Closing Balance (opening balance +sum of transactions)</th>
+                                            <th>1234</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="3">CLOSING BALANCE DIFFERENCE</th>
+                                            <th>123</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center row-full mb-2">
+                    <div class="col-12">
+                        <b>
+                                   Closing balance difference investigation
+                               </b>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-6 col-sm-12 col-md-6 col-lg-6">
+                        <div class="me-md-3 me-lg-3">
+                            <div class="row mb-2">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="4" id="tableheading">PSP TRANSACTIONS TO BE AMENDED</th>
+                                            <!-- <th scope="col" id="tableheading"></th>
+                                        <th scope="col" id="tableheading"></th> -->
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" id="tablesubheadning">REFERENCE #</th>
+                                            <th scope="col" id="tablesubheadning">DEBIT</th>
+                                            <th scope="col" id="tablesubheadning">CREDIT</th>
+                                            <th scope="col" id="tablesubheadning">COMMENT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-white">
+                                            <th scope="row"></th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="border-white">
+                                            <th scope="row"></th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="row" colspan="4" class="third-table"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-end">
+                                        <tr>
+                                            <td scope="row">TOTAL amentments</td>
+                                            <td>123</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-12 col-md-6 col-lg-6">
+                        <div class="ms-md-3 ms-lg-3">
+                            <div class="row mb-2">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th scope="col" colspan="4" id="tableheading">ATLAS TRANSACTIONS TO BE AMENDED</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" id="tablesubheadning">REFERENCE #</th>
+                                            <th scope="col" id="tablesubheadning">DEBIT</th>
+                                            <th scope="col" id="tablesubheadning">CREDIT</th>
+                                            <th scope="col" id="tablesubheadning">COMMENT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row ms-md-2 ms-lg-2">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="4" class="third-table"> </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-end">
+                                    <tr>
+                                        <th scope="row" colspan="3">TOTAL amentments</th>
+                                        <th><input type="text"></th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" colspan="3">Cloasing balance difference after amendment</th>
+                                        <th>123</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" colspan="3">FINAL ATLAS closing balance before EOD</th>
+                                        <th>1234</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" colspan="3">Broker and ATLAS balance matching</th>
+                                        <th>123</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row ">
+                            <form>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="form-group ms-md-2 ms-lg-2">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Date Viewed By...">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Date Approved By...">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="submit" class="btn btn-primary">Submit Reconciliation</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#myTable1').DataTable();
+        });
+        $(document).ready(function() {
+            $('#myTable2').DataTable();
+        });
+    </script>
+    
+ 
+    
+</body>
+</html>
+{% include 'footer.html' %}
